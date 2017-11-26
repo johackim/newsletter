@@ -11,6 +11,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
+    "feedparser-promised": "^1.4.2",
     "mjml": "^3.3.5",
     "nodemailer": "^4.4.0"
   },

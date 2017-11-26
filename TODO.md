@@ -1,4 +1,4 @@
 - [x] Use .env file
 - [x] Deplace mjml content to file
-- [ ] Import blog rss feed
+- [x] Parse & import blog feeds
 - [ ] Import csv subscribers

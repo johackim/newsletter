@@ -1,4 +1,4 @@
-export default injects => `<mjml>
+export default articles => `<mjml>
   <mj-body>
     <mj-container background-color="#E1E8ED">
       <mj-section background-color="white">
@@ -17,10 +17,10 @@ export default injects => `<mjml>
       </mj-section>
 
       <mj-section background-color="white">
-        ${injects.articles.map(article => `<mj-column width="50%">
+        ${articles.map(article => `<mj-column width="50%">
              <mj-image border="0.5px solid grey" width="300" height="180" srcset="${article.image}"></mj-image>
              <mj-text>
-                 <a href="${article.href}">${article.title} - ${article.tag}</a>
+                 <a href="${article.href}">${article.title}</a> - ${article.tag}
              </mj-text>
          </mj-column>`)}
       </mj-section>
@@ -33,11 +33,26 @@ export default injects => `<mjml>
         </mj-section>
 
         <mj-section background-color="#">
-          ${injects.networks.map(network => `<mj-group>
-              <mj-column>
-                  <mj-image padding="0px" width="32" src="${network.image}" href="${network.href}"></mj-image>
-              </mj-column>
-          </mj-group>`)}
+          <mj-group>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/LuNxgPKriP7Y/GoJUuL8JbFUs.png" href="https://mastodon.xyz/@ston3o"></mj-image>
+            </mj-column>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/LhM5Ns1HMPvZ/tW8rRNReFDiQ.png" href="https://www.reddit.com/user/ston3o/"></mj-image>
+            </mj-column>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/I3PGiFKj7jx3/dCKwGTFFwqD5.png" href="https://codepen.io/ston3o/"></mj-image>
+            </mj-column>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/r7H25mhVmIpw/8zJemB3ngT3g.png" href="https://github.com/ston3o/"></mj-image>
+            </mj-column>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/2xNVpxt4UyQW/2THi8b4hKw5w.png" href="https://twitter.com/ston3o"></mj-image>
+            </mj-column>
+            <mj-column>
+              <mj-image padding="0px" width="32" src="https://framapic.org/KTcb563pvwPa/Sm0hDdOJSBLA.png" href="https://news.ycombinator.com/submitted?id=ston3o"></mj-image>
+            </mj-column>
+          </mj-group>
         </mj-section>
         
         <mj-section background-color="#f3f3f3">
