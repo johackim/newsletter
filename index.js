@@ -19,6 +19,11 @@ dotenv.config({ silent: true });
     const newsletter = Newsletter(articles);
     const htmlOutput = mjml2html(newsletter).html;
 
+    if (process.env.NODE_ENV === 'test') {
+        fs.writeFileSync('newsletter.html', htmlOutput);
+        process.exit(0);
+    }
+
     const transporter = nodemailer.createTransport({
         port: process.env.MAIL_PORT,
         host: process.env.MAIL_HOST,

@@ -19,6 +19,7 @@
     "papaparse": "^4.3.6"
   },
   "scripts": {
-    "start": "cp -n .env.dist .env && ./node_modules/.bin/babel-node index.js"
+    "start": "cp -n .env.dist .env && ./node_modules/.bin/babel-node index.js",
+    "test": "NODE_ENV=test ./node_modules/.bin/babel-node index.js"
   }
 }
