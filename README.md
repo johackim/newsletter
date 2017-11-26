@@ -1,6 +1,8 @@
 Newsletter
 ===
 
+> Automate newsletter sending with mjml and nodemailer.
+
 Install
 ---
 
