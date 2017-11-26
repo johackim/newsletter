@@ -13,7 +13,8 @@
     "eslint-plugin-react": "^7.5.1",
     "feedparser-promised": "^1.4.2",
     "mjml": "^3.3.5",
-    "nodemailer": "^4.4.0"
+    "nodemailer": "^4.4.0",
+    "papaparse": "^4.3.6"
   },
   "scripts": {
     "start": "./node_modules/.bin/babel-node index.js"

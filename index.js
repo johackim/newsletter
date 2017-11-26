@@ -2,14 +2,14 @@ import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import { mjml2html } from 'mjml';
 import feedparser from 'feedparser-promised';
+import Papa from 'papaparse';
+import fs from 'fs';
 import Newsletter from './newsletter';
 
 dotenv.config({ silent: true });
 
 const feedUrl = 'https://blog.ston3o.me/rss/';
-const recipients = [
-    'contact@ston3o.me',
-];
+const subscribersFilePath = 'subscribers.csv';
 
 (async () => {
     const articles = (await feedparser.parse(feedUrl)).map(item => ({
@@ -38,7 +38,11 @@ const recipients = [
         html: htmlOutput,
     };
 
-    recipients.forEach((recipient) => {
-        transporter.sendMail({ ...mailOptions, to: recipient });
+    const subscribersCsvFile = fs.readFileSync(subscribersFilePath).toString();
+    const subscribers = Papa.parse(subscribersCsvFile, { header: true }).data;
+    const emails = subscribers.filter(subscriber => subscriber.email).map(subscriber => subscriber.email);
+
+    emails.forEach((email) => {
+        transporter.sendMail({ ...mailOptions, to: email });
     });
 })();
