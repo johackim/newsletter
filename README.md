@@ -1,17 +1,21 @@
 Newsletter
 ===
 
-> Automate newsletter sending with mjml and nodemailer.
+> [Automate newsletter sending with mjml and nodemailer.](https://blog.ston3o.me/automatiser-envoie-newsletter-mjml-nodemailer)
 
 Install
 ---
 
-`npm install`
+```bash
+npm install
+```
 
 Run
 ---
 
-`npm run start`
+```bash
+npm run start
+```
 
 License
 ---
