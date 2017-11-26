@@ -8,16 +8,13 @@ import Newsletter from './newsletter';
 
 dotenv.config({ silent: true });
 
-const feedUrl = 'https://blog.ston3o.me/rss/';
-const subscribersFilePath = 'subscribers.csv';
-
 (async () => {
-    const articles = (await feedparser.parse(feedUrl)).map(item => ({
+    const articles = (await feedparser.parse(process.env.FEED_URL)).map(item => ({
         title: item.title,
         href: item.link,
         tag: item.categories[0],
         image: item.enclosures[0].url,
-    })).slice(0, 4);
+    })).slice(0, process.env.NUMBER_ARTICLES);
 
     const newsletter = Newsletter(articles);
     const htmlOutput = mjml2html(newsletter).html;
@@ -38,7 +35,7 @@ const subscribersFilePath = 'subscribers.csv';
         html: htmlOutput,
     };
 
-    const subscribersCsvFile = fs.readFileSync(subscribersFilePath).toString();
+    const subscribersCsvFile = fs.readFileSync(process.env.SUBSCRIBERS_FILE_PATH).toString();
     const subscribers = Papa.parse(subscribersCsvFile, { header: true }).data;
     const emails = subscribers.filter(subscriber => subscriber.email).map(subscriber => subscriber.email);
 
