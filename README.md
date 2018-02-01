@@ -14,7 +14,7 @@ Run
 ---
 
 ```bash
-npm run start
+MAIL_PASS=<password> npm start
 ```
 
 License
