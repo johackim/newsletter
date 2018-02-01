@@ -38,13 +38,13 @@ export default articles => `<mjml>
               <mj-image padding="0px" width="32" src="https://framapic.org/LuNxgPKriP7Y/GoJUuL8JbFUs.png" href="https://mastodon.xyz/@ston3o"></mj-image>
             </mj-column>
             <mj-column>
+                <mj-image padding="0px" width="32" src="https://framapic.org/r7H25mhVmIpw/8zJemB3ngT3g.png" href="https://github.com/ston3o/"></mj-image>
+            </mj-column>
+            <mj-column>
               <mj-image padding="0px" width="32" src="https://framapic.org/LhM5Ns1HMPvZ/tW8rRNReFDiQ.png" href="https://www.reddit.com/user/ston3o/"></mj-image>
             </mj-column>
             <mj-column>
               <mj-image padding="0px" width="32" src="https://framapic.org/I3PGiFKj7jx3/dCKwGTFFwqD5.png" href="https://codepen.io/ston3o/"></mj-image>
-            </mj-column>
-            <mj-column>
-              <mj-image padding="0px" width="32" src="https://framapic.org/r7H25mhVmIpw/8zJemB3ngT3g.png" href="https://github.com/ston3o/"></mj-image>
             </mj-column>
             <mj-column>
               <mj-image padding="0px" width="32" src="https://framapic.org/2xNVpxt4UyQW/2THi8b4hKw5w.png" href="https://twitter.com/ston3o"></mj-image>
