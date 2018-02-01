@@ -18,7 +18,7 @@ export default articles => `<mjml>
 
       <mj-section background-color="white">
         ${articles.map(article => `<mj-column width="50%">
-             <mj-image border="0.5px solid grey" width="300" height="180" src="${article.image}"></mj-image>
+             <mj-image border="0.5px solid grey" width="300" src="${article.image}"></mj-image>
              <mj-text align="center">
                  <a href="${article.href}">${article.title}</a>
              </mj-text>
